@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/css/output.css"/>
+
+  <title>Danielle F. Bortoletto</title>
+  <h2>Portifólio</h2>
+</head>
+<body>
+  <header class="navBar">
+    <nav>
+      <ul class="navList">
+        <li><a class="navItem" href="#inicio">Início</a></li>
+        <li><a href="#biografia">Biografia</a></li>
+        <li><a href="#historico">Histórico/Especialização</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="inicio">
+      <div class="apresentacao">
+        <h1>Danielle F. <br>Bortoleto</h1>
+        <h2>Analista e Desenvolvedora de Sistemas</h2>
+        <a href="#contato" class="botao-contato">Entrar em contato</a>
+      </div>
+      <div class="avatar">
+        <img src="img/Animação.png" alt="Ilustração desenvolvedora" />
+      </div>
+    </section>
+
+    <section id="biografia" class="biografia">
+      <h2>Biografia</h2>
+      <div class="conteudo-biografia">
+        <img src="img/Foto-Perfil.jpg" alt="Danielle F. Bortoleto" />
+        <div>
+          <h3>Sou Analista e Desenvolvedora de Sistemas, em formação...</h3>
+          <p>
+            Em toda minha carreira profissional e estudantil sempre fui apaixonada pela tecnologia!<br/>
+            Atualmente, estou à procura de novas oportunidades para que eu possa ter novas perspectivas de aprendizado e experiência.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="historico" class="historico">
+      <div class="coluna">
+        <h2>Histórico</h2>
+        <p><strong>IEP - Instituto Educacional Profissionalizantes de Jales</strong></p>
+        <ul>
+          <li>T.I. com foco em Gestão</li>
+        </ul>
+        <p><strong>FATEC Jales - Faculdade de Tecnologia</strong></p>
+        <ul>
+          <li>Análise e Desenvolvimento de Sistemas (cursando)</li>
+        </ul>
+      </div>
+      <div class="coluna">
+        <h2>Especialização</h2>
+        <ul>
+          <li>Não sei o que colocar ainda rsrsrs</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <h2>Projetos</h2>
+
+      <div class="carrossel-wrapper">
+        <button id="btn-prev">←</button>
+        
+        <div class="carrossel" id="carrossel-projetos">
+          <div class="card-projeto">
+            <img src="projeto1.jpg" alt="Projeto 1">
+            <p>Descrição do projeto 1</p>
+          </div>
+          <div class="card-projeto">
+            <img src="projeto2.jpg" alt="Projeto 2">
+            <p>Descrição do projeto 2</p>
+          </div>
+          <!-- Adicione mais projetos conforme necessário -->
+        </div>
+        
+        <button id="btn-next">→</button>
+      </div>
+    </section>
+
+    <section id="contato" class="contato">
+      <h2>Fale Comigo</h2>
+      <ul class="links">
+        <li><a href="https://wa.me/19983173897" target="_blank">WhatsApp</a></li>
+        <li><a href="https://www.linkedin.com/in/danielle-ferreira-bortoleto/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/danielleBortoleto" target="_blank">GitHub</a></li>
+        <li><a href="LINK_CURRICULO_DIGITAL" target="_blank">Currículo Digital</a></li>
+        <li><a href="mailto:danielle.bortoleto3412@gmail.com">E-mail</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Copyright Danielle Ferreira Bortoleto</p>
+  </footer>
+
+  <script>
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const carrossel = document.getElementById('carrossel-projetos');
+
+    const scrollAmount = 320; // largura do card + gap
+
+    btnPrev.addEventListener('click', () => {
+      carrossel.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth'
+      });
+    });
+
+    btnNext.addEventListener('click', () => {
+      carrossel.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+
+</body>
+</html>
